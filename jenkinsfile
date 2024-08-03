@@ -53,7 +53,10 @@ pipeline {
                 script {
                     // Stop and remove the containers
                     echo "#####Login Started#####"
+                    withCredentials([usernamePassword(credentialsId: 'DockerHub_credentials', usernameVariable: 'username', passwordvariable: 'password')])
+                    {
                     sh 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin'
+                    }
                     echo "#####Login completed#####"
                     echo "*****************Images push to DokcherHub started************"
                     sh """
