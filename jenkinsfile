@@ -66,15 +66,10 @@ pipeline {
                     sudo docker push thilaga219/multi-worker
                     """
                     echo "*****************Images push to DokcherHub Complted************"
+
+                    cleanWs()
                 }
             }
         }
- 
-    post {
-        always {
-            // Clean up workspace
-            cleanWs()
-        }
-    }
 }
 }
