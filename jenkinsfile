@@ -38,7 +38,7 @@ pipeline {
                     // Stop and remove the containers
                     echo "######Final Images built started#####"
                     sh """ 
-                    sudo docker build -t thilaga219/multi-client ./client
+                    docker build -t thilaga219/multi-client ./client
                     sudo docker build -t thilaga219/multi-nginx ./nginx
                     sudo docker build -t thilaga219/multi-server ./server
                     sudo docker build -t thilaga219/multi-worker ./worker 
