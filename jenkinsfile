@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Build and run the Docker containers
-                    echo "####Dev build started#######"
+                    echo "####Dev build started#########"
                     sh 'docker build -t thilaga219/react-test -f ./client/Dockerfile.dev ./client/Dockerfile.dev'
                     echo "####Dev build Ended######"
                 }
