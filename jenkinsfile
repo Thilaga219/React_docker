@@ -26,7 +26,7 @@ pipeline {
                 script {
                     echo "#######Test Started#########"
                     // Test if the web service is running
-                    sh 'sudo docker run -e CI=true thilaga219/react-test npm test -- --coverage'
+                    sh 'docker run -e CI=true thilaga219/react-test npm test -- --coverage'
                     echo "#######Test Ended#########"
                 }
             }
